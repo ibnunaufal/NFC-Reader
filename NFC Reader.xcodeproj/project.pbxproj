@@ -11,6 +11,7 @@
 		52EC63A629E79027009E6A63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC63A529E79027009E6A63 /* ContentView.swift */; };
 		52EC63A829E7902B009E6A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EC63A729E7902B009E6A63 /* Assets.xcassets */; };
 		52EC63AB29E7902B009E6A63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EC63AA29E7902B009E6A63 /* Preview Assets.xcassets */; };
+		52EC63B329E79260009E6A63 /* SwiftNFC in Frameworks */ = {isa = PBXBuildFile; productRef = 52EC63B229E79260009E6A63 /* SwiftNFC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		52EC63A529E79027009E6A63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52EC63A729E7902B009E6A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52EC63AA29E7902B009E6A63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52EC63B429E7927B009E6A63 /* NFC Reader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "NFC Reader.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EC63B329E79260009E6A63 /* SwiftNFC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		52EC63A229E79027009E6A63 /* NFC Reader */ = {
 			isa = PBXGroup;
 			children = (
+				52EC63B429E7927B009E6A63 /* NFC Reader.entitlements */,
 				52EC63A329E79027009E6A63 /* NFC_ReaderApp.swift */,
 				52EC63A529E79027009E6A63 /* ContentView.swift */,
 				52EC63A729E7902B009E6A63 /* Assets.xcassets */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = "NFC Reader";
+			packageProductDependencies = (
+				52EC63B229E79260009E6A63 /* SwiftNFC */,
+			);
 			productName = "NFC Reader";
 			productReference = 52EC63A029E79027009E6A63 /* NFC Reader.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 52EC639729E79027009E6A63;
+			packageReferences = (
+				52EC63B129E79260009E6A63 /* XCRemoteSwiftPackageReference "SwiftNFC" */,
+			);
 			productRefGroup = 52EC63A129E79027009E6A63 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,17 +274,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NFC Reader/NFC Reader.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NFC Reader/Preview Content\"";
 				DEVELOPMENT_TEAM = S26S2NK5MN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Use NFC to read NFC Tag";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,17 +306,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "NFC Reader/NFC Reader.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NFC Reader/Preview Content\"";
 				DEVELOPMENT_TEAM = S26S2NK5MN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Use NFC to read NFC Tag";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52EC63B129E79260009E6A63 /* XCRemoteSwiftPackageReference "SwiftNFC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/1998code/SwiftNFC";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52EC63B229E79260009E6A63 /* SwiftNFC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52EC63B129E79260009E6A63 /* XCRemoteSwiftPackageReference "SwiftNFC" */;
+			productName = SwiftNFC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52EC639829E79027009E6A63 /* Project object */;
 }

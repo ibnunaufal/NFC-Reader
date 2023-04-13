@@ -6,16 +6,31 @@
 //
 
 import SwiftUI
+import SwiftNFC
+
 
 struct ContentView: View {
+    @State private var nfcId: String? = ""
+    @ObservedObject var NFCR = NFCReader()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("NFC Id: \(NFCR.raw)")
+            Button (action: { read() }) {
+                ZStack {
+                    Color.pink.opacity(0.85)
+                    Label("Read NFC", systemImage: "wave.3.left.circle.fill")
+                        .foregroundColor(.white)
+                }
+            }
+            .frame(height: 75)
+            .cornerRadius(10)
         }
         .padding()
+    }
+    
+    func read() {
+        NFCR.read()
     }
 }
 
